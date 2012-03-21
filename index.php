@@ -14,7 +14,7 @@
 	<meta name="author" content="">
 	<meta name="viewport" content="width=device-width; initial-scale=1.0">
 	<!-- !CSS -->
-	<link rel="stylesheet" href="css/style.a.css?v=1">
+	<link rel="stylesheet" href="css/style.css?v=1">
 	<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   
