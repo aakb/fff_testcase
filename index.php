@@ -27,27 +27,36 @@
       "target" : "#widget1",
       "style"  : "full"
     });
-    fffWidgetConfig.push({
-      "widget" : "slidein",
-      "target" : "#widget2",
-      "style"  : "bare"
-    });
-  
+
     (function() {
       var fff = document.createElement('script'); fff.type = 'text/javascript'; fff.async = true;
-      fff.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'service.finurligefakta.dk/fff.widget.js';
+      fff.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'service.finurligefakta.local/fff.widget.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(fff, s);
     })();
   
   </script>
+  
+  <style>
+    body {
+      background: green;
+    }
+    
+    .container {
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+    #widget1, #widget2 {
+      width: 30%;
+      border: 1px solid #fff;
+    }
+  </style>
+  <link rel="stylesheet" href="//service.finurligefakta.local/css/fffw.full.default.css" />
 </head>
 <!-- !Body -->
 <body>
 	<div class="container">
 		<header>
-			<ul class="nav">
-				<li><a href="#loadlocal" title="Home">Load local</a></li>
-			</ul><!-- /#nav  -->
 		</header><!-- /header -->
 		
 		<section class="content">
@@ -56,6 +65,25 @@
 		  <p>Content before widget</p>
 		  <div id="widget1"></div>
 		  <p>Content after widget</p>
+		  <div id="widget2">
+		  <div class="fffW-widget fffW-interactive">
+        <div class="fffW-innerwrapper">
+          <h2 class="fffW-title">Jeg kan høre med mit øre</h2>
+          <div class="fffW-text">
+            <p>Ideen om at mennesket har fem sanser, stammer fra Aristoteles. I virkeligheden har mennesket mellem 9 - 20 sanser afhængigt af definition.</p>
+          </div>
+          <span class="fffW-link fffW-source">Kilde: <a href="#">Den store danske</a></span>
+          <div class="fffW-links">
+            <a class="fffW-button fffW-reload" href="#">Ny fakta</a>
+            <a class="fffW-button fffW-readmore" href="#">L&aelig;s mere</a>
+          </div>
+        </div>
+        <div class="fffW-footer">
+          <a class="fffW-link fffW-submit" href="#">Indsend finurlig fakta</a>
+          <a class="fffW-logo fffW-imagelink"><img src="logo.png" width="40" height="20" alt="FinurligeFaktaFinder-projektet"/></a>
+        </div>
+      </div>
+		  </div>
 		<footer>
 		
 		</footer><!-- /footer -->
