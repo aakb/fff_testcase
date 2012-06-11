@@ -1,4 +1,9 @@
-<!DOCTYPE html>   
+<?php
+ $widget = 'fff_widgets.leela/';
+ $jquery_url = 'scripts/jquery-1.3.2.min.js';
+?>
+
+<!DOCTYPE html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
@@ -13,10 +18,8 @@
 	<meta name="keywords" content="" />
 	<meta name="author" content="">
 	<meta name="viewport" content="width=device-width; initial-scale=1.0">
-	<!-- !CSS -->
 	<link rel="stylesheet" href="css/style.css?v=1">
-	<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="<?php echo $jquery_url; ?>"></script>
   
   <!-- FFF Widget Code - So far does nothing :-) -->
 	<script type="text/javascript">
@@ -25,12 +28,12 @@
     fffWidgetConfig.push({
       "widget" : "interactive",
       "target" : "#widget1",
-      "style"  : "full"
+      "style"  : "full",
     });
 
     (function() {
       var fff = document.createElement('script'); fff.type = 'text/javascript'; fff.async = true;
-      fff.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'service.finurligefakta.local/fff.widget.js';
+      fff.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + '<?php echo $widget ?>/fff.widget.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(fff, s);
     })();
   
@@ -46,12 +49,11 @@
       margin: 0 auto;
     }
     
-    #widget1, #widget2 {
+    #widget1 {
       width: 30%;
       border: 1px solid #fff;
     }
   </style>
-  <link rel="stylesheet" href="//service.finurligefakta.local/css/fffw.full.default.css" />
 </head>
 <!-- !Body -->
 <body>
@@ -65,25 +67,6 @@
 		  <p>Content before widget</p>
 		  <div id="widget1"></div>
 		  <p>Content after widget</p>
-		  <div id="widget2">
-		  <div class="fffW-widget fffW-interactive">
-        <div class="fffW-innerwrapper">
-          <h2 class="fffW-title">Jeg kan høre med mit øre</h2>
-          <div class="fffW-text">
-            <p>Ideen om at mennesket har fem sanser, stammer fra Aristoteles. I virkeligheden har mennesket mellem 9 - 20 sanser afhængigt af definition.</p>
-          </div>
-          <span class="fffW-link fffW-source">Kilde: <a href="#">Den store danske</a></span>
-          <div class="fffW-links">
-            <a class="fffW-button fffW-reload" href="#">Ny fakta</a>
-            <a class="fffW-button fffW-readmore" href="#">L&aelig;s mere</a>
-          </div>
-        </div>
-        <div class="fffW-footer">
-          <a class="fffW-link fffW-submit" href="#">Indsend finurlig fakta</a>
-          <a class="fffW-logo fffW-imagelink"><img src="logo.png" width="40" height="20" alt="FinurligeFaktaFinder-projektet"/></a>
-        </div>
-      </div>
-		  </div>
 		<footer>
 		
 		</footer><!-- /footer -->
