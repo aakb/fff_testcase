@@ -1,5 +1,5 @@
 <?php
- $widget = 'fff_widgets.leela/';
+ $widget = 'service.finurligefakta.dk/widgets';
  $jquery_url = 'scripts/jquery-1.3.2.min.js';
 ?>
 
@@ -26,9 +26,12 @@
 
     var fffWidgetConfig = [];
     fffWidgetConfig.push({
-      "widget" : "interactive",
-      "target" : "#widget1",
-      "style"  : "full",
+      'widget' : 'interactive',
+      'target' : '#widget1',
+      'style' : 'full',
+      'event' : {
+        "loadComplet"  : function () { }
+      }
     });
 
     (function() {
@@ -40,18 +43,9 @@
   </script>
   
   <style>
-    body {
-      background: green;
-    }
-    
     .container {
       width: 100%;
       margin: 0 auto;
-    }
-    
-    #widget1 {
-      width: 30%;
-      border: 1px solid #fff;
     }
   </style>
 </head>
@@ -64,9 +58,7 @@
 		<section class="content">
 		
 		</section><!-- /main -->
-		  <p>Content before widget</p>
 		  <div id="widget1"></div>
-		  <p>Content after widget</p>
 		<footer>
 		
 		</footer><!-- /footer -->
